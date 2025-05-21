@@ -11,7 +11,7 @@ class Solution:
                 if nums[l - 1] == 0:
                     count -= 1
 
-            longSeq = r - l + 1
+            longSeq = r - l
             result = max(result, longSeq)
         
-        return result - 1
+        return result
