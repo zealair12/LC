@@ -14,14 +14,14 @@ class Solution:
             elif abs(ast) == last:
                 stk.pop()
             elif abs(ast) > last:      
-                    while last > 0 and abs(ast) > last and stk:
-                        stk.pop()
-                        if stk:
-                            last = stk[-1]
-                    if last == abs(ast):
-                        stk.pop()
-                    elif last < abs(ast):
-                        stk.append(ast)
+                while last > 0 and abs(ast) > last and stk:
+                    stk.pop()
+                    if stk:
+                        last = stk[-1]
+                if last == abs(ast):
+                    stk.pop()
+                elif last < abs(ast):
+                    stk.append(ast)
             
 
         return stk
