@@ -7,7 +7,7 @@ class Solution:
                 stk.append(ast)
                 continue
             last = stk[-1]
-            if ast > 0 or ast * last > 0:
+            if ast > 0 or last < 0:
                 stk.append(ast) 
             elif abs(ast) == last:
                 stk.pop()
