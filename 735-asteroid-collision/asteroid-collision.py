@@ -13,11 +13,7 @@ class Solution:
                 stk.append(ast)
             elif abs(ast) == last:
                 stk.pop()
-            elif abs(ast) > last:
-                stk.pop()
-                if not stk or stk[-1] < 0:
-                    stk.append(ast)
-                else:   
+            elif abs(ast) > last:  
                     last = stk[-1]     
                     while last > 0 and abs(ast) > last and stk:
                         stk.pop()
@@ -27,15 +23,6 @@ class Solution:
                         stk.pop()
                     elif last < abs(ast):
                         stk.append(ast)
-                # 
-                # while len(stk) > 1 and stk[-1] < 0 and stk[-2] > 0:
-                #     if abs(stk[-1]) > stk[-2]:
-                #         stk.pop(-2)
-                #     elif abs(stk[-1]) < stk[-2]:
-                #         stk.pop()
-                #     else:
-                #         stk.pop()
-                #         stk.pop()
             
 
         return stk
