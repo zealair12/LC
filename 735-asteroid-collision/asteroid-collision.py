@@ -13,8 +13,7 @@ class Solution:
                 stk.append(ast)
             elif abs(ast) == last:
                 stk.pop()
-            elif abs(ast) > last:  
-                    last = stk[-1]     
+            elif abs(ast) > last:      
                     while last > 0 and abs(ast) > last and stk:
                         stk.pop()
                         if stk:
